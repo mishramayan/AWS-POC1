@@ -12,7 +12,8 @@
                 jQuery.ajax(
                     "https://3hsj1pw603.execute-api.us-east-1.amazonaws.com/default/helloENDpoint"
                 ).done(function(data){
-                    response = JSON.parse(data.body);
+                    console.log(data);
+                    response = JSON.parse(data);
                     jQuery("#randomNumber").html("Your Random Number is : " + response.randomInt + '<br/>' + 
                     "Your Random Float is : " + response.randomFloat + '<br/>')
                 });
